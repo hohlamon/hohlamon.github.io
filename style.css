@@ -3,7 +3,7 @@
     margin: auto;
     border: 1px solid #ccc;
     padding: 10px;
-    background-image: url("./materials/image.png");
+    background-image: url(./materials/image.png);
 }
 input[type="button"] {
     width: 45px;
@@ -32,6 +32,6 @@ input[type="button"] {
     border: 1px solid #ccc;
     padding: 10px;
     font-size: 1.5em;
-    background-image: url("./materials/image_2.jpg");
+    background-image: url(./materials/image_2.jpg);
 
 }
