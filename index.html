@@ -1,57 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Calculator</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Артём Холманский — Python Developer Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      max-width: 800px;
+      color: #333;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .contact a {
+      margin-right: 15px;
+    }
+    .title {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-<div class="calculator">
-    <input type="text" class= "display" id="display" disabled>
-    <br>
-    <input type="button" value="1" onclick="addToDisplay('1')">
-    <input type="button" value="2" onclick="addToDisplay('2')">
-    <input type="button" value="3" onclick="addToDisplay('3')">
-    
-    <input type="button" class = "operation" value="+" onclick="addToDisplay('+')">
-    
-    <input type="button" value="4" onclick="addToDisplay('4')">
-    <input type="button" value="5" onclick="addToDisplay('5')">
-    <input type="button" value="6" onclick="addToDisplay('6')">
-    <input type="button" class = "operation" value="-" onclick="addToDisplay('-')">
-    <input type="button" value="7" onclick="addToDisplay('7')">
-    <input type="button" value="8" onclick="addToDisplay('8')">
-    <input type="button" value="9" onclick="addToDisplay('9')">
-    <input type="button" class = "operation" value="*" onclick="addToDisplay('*')">
-    <input type="button" value="0" onclick="addToDisplay('0')">
-    <input type="button" class = "operation" value="/" onclick="addToDisplay('/')">
-    <input type="button" class = "operation" value="^" onclick="addToDisplay('**')">
-    <input type="button" class = "operation" value="=" onclick="calculate()">
+  <header>
+    <h1>Холманский Артём</h1>
+    <p>Python Developer | FastAPI, LLM, RAG</p>
+    <div class="contact">
+      <a href="tel:+79236614063">+7 (923) 661-4063</a>
+      <a href="mailto:artemholmansky@yandex.ru">artemholmansky@yandex.ru</a>
+      <a href="https://github.com/hohlamon">GitHub</a>
+      <a href="https://linkedin.com/in/artem-kholmanskii">LinkedIn</a>
+      <a href="https://t.me/hohlamoon">@hohlamoon</a>
+    </div>
+  </header>
 
-    <br>
-    <br>
-    <input type="button" class = "determinate" value="C" onclick="clearDisplay()">
+  <section class="section">
+    <h2>Опыт</h2>
+    <h3>Senior Prompt Engineer — MWS AI (Remote)</h3>
+    <p><em>01/2025 — настоящее время</em></p>
+    <ul>
+      <li>Проектировал агентов с помощью Langflow и LangChain</li>
+      <li>Разрабатывал LLM-пайплайны для PoC и MVP</li>
+      <li>Использовал RAG для стабилизации генерации</li>
+      <li>Разрабатывал FastAPI сервисы для LLM-продуктов</li>
+    </ul>
 
-</div>
+    <h3>Prompt Engineer — MWS AI (Remote)</h3>
+    <p><em>06/2024 — 01/2025</em></p>
+    <ul>
+      <li>Увеличил точность LLM-классификатора на 25%</li>
+      <li>PoC-проект дошёл до стадии внедрения</li>
+    </ul>
 
-<script>
-    function addToDisplay(value) {
-        document.getElementById('display').value += value;
-    }
+    <h3>Python Developer — Самозанятый</h3>
+    <p><em>06/2022 — 06/2024</em></p>
+    <ul>
+      <li>Проект анализа и редактирования .docx на основе LLM</li>
+      <li>Фриланс-проекты по анализу текстов (gensim/word2vec)</li>
+    </ul>
+  </section>
 
-    function clearDisplay() {
-        document.getElementById('display').value = '';
-    }
+  <section class="section">
+    <h2>Образование</h2>
+    <ul>
+      <li><strong>ИТМО</strong>, Магистр — Интеллектуальные системы (2022–2025)</li>
+      <li><strong>School21</strong>, Computer Science (04/2024 — настоящее время)</li>
+      <li><strong>СПбГУ</strong>, Бакалавр — Лингвистика (2018–2022)</li>
+    </ul>
+  </section>
 
-    function calculate() {
-        try {
-            let result = eval(document.getElementById('display').value);
-            document.getElementById('display').value = result;
-        } catch (error) {
-            document.getElementById('display').value = 'Error';
-        }
-    }
-</script>
+  <section class="section">
+    <h2>Навыки</h2>
+    <p><strong>Языки программирования:</strong> Python, основы C, Bash</p>
+    <p><strong>Web:</strong> REST API, FastAPI</p>
+    <p><strong>Базы данных:</strong> MongoDB, Postgres, Redis, ChromaDB</p>
+    <p><strong>Инфраструктура:</strong> Docker, GitLab, Linux</p>
+    <p><strong>Тестирование:</strong> pytest</p>
+    <p><strong>Мониторинг:</strong> Sentry, Grafana</p>
+    <p><strong>LLM:</strong> LangChain, LangFlow, OpenAI</p>
+    <p><strong>NLP:</strong> pymorphy, Spacy, gensim, sklearn</p>
+    <p><strong>Прочее:</strong> asyncio, Telegram Bot API, RabbitMQ, boto3</p>
+  </section>
+
+  <section class="section">
+    <h2>Проекты</h2>
+    <h3>LMS в Telegram (05/2024 — наст. время)</h3>
+    <p>Telegram-бот для управления учебным процессом. <br/>
+    <strong>Стек:</strong> FastAPI, Redis, MongoDB, RQ, Docker, boto3<br/>
+    <strong>Роль:</strong> Архитектура, бизнес-логика, API</p>
+
+    <h3>DOCXAI (Осень 2023)</h3>
+    <p>Бот для обработки DOCX/PDF файлов с помощью OpenAI. <br/>
+    <strong>Стек:</strong> Python, asyncio, aiohttp, OpenAI API, pdf2docx<br/>
+    <strong>Роль:</strong> Архитектура, асинхронная обработка, Telegram/OpenAI интеграция</p>
+  </section>
+
+  <section class="section">
+    <h2>О себе</h2>
+    <p>Молодой и амбициозный разработчик с интересом к GenAI и NLP. Быстро обучаюсь. Увлекаюсь спортом, гитарой и театром.</p>
+    <p><strong>Языки:</strong> English (B2+)</p>
+  </section>
 </body>
 </html>
